@@ -143,6 +143,7 @@ class ProductData {
   ];
 
   static List<String> get categories => [
+    'الكل',
     'ورق طباعة',
     'ورق صور',
     'ورق ملون',
