@@ -4,12 +4,13 @@ class ProductData {
   static List<Product> get products => [
     Product(
       id: '1',
-      name: 'ورق A4 أبيض',
+      name: 'ورق A4',
       description: 'ورق A4 عالي الجودة للطباعة والكتابة',
       longDescription:
           'ورق A4 أبيض عالي الجودة مصنوع من ألياف طبيعية 100%، مناسب لجميع أنواع الطباعة والكتابة. يتميز بسطح أملس وبياض ناصع يضمن وضوح النصوص والصور. مقاوم للتجعد والتشوه، ومعتمد من المعايير البيئية العالمية.',
       price: 15000,
-      image: 'assets/images/a4_white.png',
+      image:
+          'https://avatars.mds.yandex.net/get-mpic/6647093/img_id5819843616419308124.jpeg/orig',
       category: 'A4',
       features: [
         '500 ورقة بحجم A4 (210×297 مم)',
