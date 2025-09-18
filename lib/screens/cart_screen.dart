@@ -138,17 +138,33 @@ class CartItemCard extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Row(
           children: [
-            Container(
-              width: 60,
-              height: 60,
-              decoration: BoxDecoration(
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Container(
+                width: 60,
+                height: 60,
                 color: Colors.blue.shade50,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Icon(
-                Icons.description,
-                color: Colors.blue,
-                size: 30,
+                child: Image.network(
+                  cartItem.product.image,
+                  fit: BoxFit.cover,
+                  errorBuilder: (ctx, err, st) => const Center(
+                    child: Icon(
+                      Icons.image_not_supported,
+                      color: Colors.blue,
+                      size: 26,
+                    ),
+                  ),
+                  loadingBuilder: (ctx, child, progress) {
+                    if (progress == null) return child;
+                    return const Center(
+                      child: SizedBox(
+                        width: 22,
+                        height: 22,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
             const SizedBox(width: 12),

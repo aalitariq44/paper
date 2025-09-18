@@ -409,18 +409,37 @@ class ProductCard extends StatelessWidget {
           children: [
             Expanded(
               flex: 3,
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.vertical(
-                    top: Radius.circular(12),
-                  ),
-                  gradient: LinearGradient(
-                    colors: [Colors.blue.shade100, Colors.blue.shade50],
-                  ),
+              child: ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(12),
                 ),
-                child: const Center(
-                  child: Icon(Icons.description, size: 60, color: Colors.blue),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    Container(color: Colors.blue.shade50),
+                    Image.network(
+                      product.image,
+                      fit: BoxFit.cover,
+                      errorBuilder: (ctx, err, st) => Center(
+                        child: Icon(
+                          Icons.image_not_supported,
+                          color: Colors.blue.shade300,
+                          size: 48,
+                        ),
+                      ),
+                      loadingBuilder: (ctx, child, progress) {
+                        if (progress == null) return child;
+                        return Center(
+                          child: CircularProgressIndicator(
+                            value: progress.expectedTotalBytes != null
+                                ? progress.cumulativeBytesLoaded /
+                                      (progress.expectedTotalBytes ?? 1)
+                                : null,
+                          ),
+                        );
+                      },
+                    ),
+                  ],
                 ),
               ),
             ),

@@ -38,19 +38,37 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                       });
                     },
                     itemBuilder: (context, index) {
+                      final url = widget.product.images[index];
                       return Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [Colors.blue.shade50, Colors.white],
-                          ),
-                        ),
-                        child: Center(
-                          child: Icon(
-                            Icons.description,
-                            size: 120,
-                            color: Colors.blue.shade400,
+                        color: Colors.white,
+                        child: InteractiveViewer(
+                          child: Image.network(
+                            url,
+                            fit: BoxFit.contain,
+                            errorBuilder: (ctx, err, st) => Container(
+                              color: Colors.blue.shade50,
+                              child: Center(
+                                child: Icon(
+                                  Icons.broken_image,
+                                  size: 120,
+                                  color: Colors.blue.shade300,
+                                ),
+                              ),
+                            ),
+                            loadingBuilder: (ctx, child, progress) {
+                              if (progress == null) return child;
+                              return Container(
+                                color: Colors.blue.shade50,
+                                child: Center(
+                                  child: CircularProgressIndicator(
+                                    value: progress.expectedTotalBytes != null
+                                        ? progress.cumulativeBytesLoaded /
+                                              (progress.expectedTotalBytes ?? 1)
+                                        : null,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                         ),
                       );

@@ -2,143 +2,158 @@ import '../models/product.dart';
 
 class ProductData {
   static List<Product> get products => [
+    // 1) كارتون ورق A4
     Product(
       id: '1',
-      name: 'ورق A4',
-      description: 'ورق A4 عالي الجودة للطباعة والكتابة',
+      name: 'كارتون ورق A4',
+      description: 'ورق مقوى A4 للطباعة والمشاريع',
       longDescription:
-          'ورق A4 أبيض عالي الجودة مصنوع من ألياف طبيعية 100%، مناسب لجميع أنواع الطباعة والكتابة. يتميز بسطح أملس وبياض ناصع يضمن وضوح النصوص والصور. مقاوم للتجعد والتشوه، ومعتمد من المعايير البيئية العالمية.',
-      price: 15000,
+          'ورق مقوى بحجم A4 مناسب للطباعة، المشاريع المدرسية، البروشورات والملفات. يتميز بمتانة عالية وسطح أملس لنتائج طباعة واضحة.',
+      price: 18000.0,
       image:
           'https://avatars.mds.yandex.net/get-mpic/6647093/img_id5819843616419308124.jpeg/orig',
-      category: 'A4',
+      category: 'ورق طباعة',
       features: [
-        '500 ورقة بحجم A4 (210×297 مم)',
-        'وزن الورقة: 80 جم/م²',
-        'درجة البياض: 96%',
-        'مناسب لجميع أنواع الطابعات',
-        'معتمد من ISO 14001',
-        'صديق للبيئة',
+        'A4 210×297 مم',
+        'سماكة مقواة 160–220 جم/م²',
+        'مناسب لطابعات الليزر والحبر',
+        'سطح أملس لنتائج دقيقة',
       ],
       images: [
-        'assets/images/a4_white_1.png',
-        'assets/images/a4_white_2.png',
-        'assets/images/a4_white_3.png',
+        'https://avatars.mds.yandex.net/get-mpic/6647093/img_id5819843616419308124.jpeg/orig',
+        'https://avatars.mds.yandex.net/get-mpic/6647093/img_id5819843616419308124.jpeg/orig',
       ],
     ),
+    // 2) A4 عادي
     Product(
       id: '2',
-      name: 'ورق A4 ملون',
-      description: 'ورق A4 ملون متنوع الألوان',
+      name: 'ورق A4',
+      description: 'ورق A4 للطباعة اليومية 80 جم',
       longDescription:
-          'مجموعة رائعة من أوراق A4 الملونة بألوان زاهية ومتنوعة. مثالية للمشاريع الفنية، العروض التقديمية، والأعمال الإبداعية. تتضمن 10 ألوان مختلفة بدرجات متدرجة وجذابة.',
-      price: 20000,
-      image: 'assets/images/a4_colored.png',
-      category: 'A4',
+          'حزمة ورق A4 أبيض 80 جم/م² مناسبة للاستخدام اليومي في المنزل والمكتب. أداء ثابت مع معظم الطابعات والناسخات.',
+      price: 15000.0,
+      image:
+          'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+      category: 'ورق طباعة',
       features: [
-        '250 ورقة متنوعة الألوان',
-        '10 ألوان مختلفة (25 ورقة لكل لون)',
-        'وزن الورقة: 80 جم/م²',
-        'ألوان ثابتة ومقاومة للبهتان',
-        'مناسبة للطباعة والرسم',
-        'خالية من الأحماض',
+        '500 ورقة A4',
+        'وزن 80 جم/م²',
+        'بياض جيد ونعومة مناسبة',
+        'متوافق مع أغلب الطابعات',
       ],
       images: [
-        'assets/images/a4_colored_1.png',
-        'assets/images/a4_colored_2.png',
-        'assets/images/a4_colored_3.png',
+        'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+        'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
       ],
     ),
+    // 3) A5
     Product(
       id: '3',
-      name: 'ورق A4 فاخر',
-      description: 'ورق A4 فاخر عالي الجودة للوثائق المهمة',
+      name: 'ورق A5',
+      description: 'ورق A5 للطباعة والملاحظات',
       longDescription:
-          'ورق A4 فاخر بجودة استثنائية، مصمم خصيصاً للوثائق المهمة والرسمية. يتميز بملمس ناعم وسطح أملس فائق الجودة، مما يضمن مظهراً احترافياً مميزاً لجميع مطبوعاتك.',
-      price: 25000,
-      image: 'assets/images/a4_premium.png',
-      category: 'A4',
-      features: [
-        '200 ورقة فاخرة',
-        'وزن الورقة: 120 جم/م²',
-        'ملمس فاخر وناعم',
-        'درجة بياض فائقة 98%',
-        'مقاوم للماء والرطوبة',
-        'مناسب للشهادات والوثائق الرسمية',
-      ],
+          'ورق أبيض بحجم A5 مناسب للطباعة الخفيفة، الكتيبات، والملاحظات. جودة جيدة وسطح أملس.',
+      price: 12000.0,
+      image:
+          'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+      category: 'ورق طباعة',
+      features: ['A5 148×210 مم', 'وزن 70–80 جم/م²', 'ملائم للطباعة والكتابة'],
       images: [
-        'assets/images/a4_premium_1.png',
-        'assets/images/a4_premium_2.png',
-        'assets/images/a4_premium_3.png',
+        'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+        'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
       ],
     ),
+    // 4) Canon Glossy Photo Paper
     Product(
       id: '4',
-      name: 'ورق A6 أبيض',
-      description: 'ورق A6 صغير الحجم للملاحظات',
+      name: 'Glossy Photo Paper Canon',
+      description: 'ورق صور كانون لامع بجودة عالية',
       longDescription:
-          'ورق A6 أبيض مثالي للملاحظات السريعة، البطاقات الشخصية، والقوائم اليومية. حجم مناسب للحمل والاستخدام في أي مكان. جودة عالية بسعر اقتصادي.',
-      price: 8000,
-      image: 'assets/images/a6_white.png',
-      category: 'A6',
+          'ورق صور لامع من Canon للحصول على ألوان مشرقة وتفاصيل حادة. مثالي لطباعة الصور المنزلية والاحترافية.',
+      price: 22000.0,
+      image: 'https://dtz3um9jw7ngl.cloudfront.net/p/l/91850503/91850503.jpg',
+      category: 'ورق صور',
       features: [
-        '1000 ورقة بحجم A6 (105×148 مم)',
-        'وزن الورقة: 70 جم/م²',
-        'مناسب للكتابة اليدوية',
-        'سهل الحمل والتخزين',
-        'ورق أبيض ناصع',
-        'اقتصادي ومفيد',
+        'تشطيب لامع عالي الجودة',
+        'تجفيف سريع ومقاوم لللطخات',
+        'ألوان غنية وتباين ممتاز',
       ],
       images: [
-        'assets/images/a6_white_1.png',
-        'assets/images/a6_white_2.png',
-        'assets/images/a6_white_3.png',
+        'https://dtz3um9jw7ngl.cloudfront.net/p/l/91850503/91850503.jpg',
+        'https://dtz3um9jw7ngl.cloudfront.net/p/l/91850503/91850503.jpg',
       ],
     ),
+    // 5) Epson Glossy Photo Paper
     Product(
       id: '5',
-      name: 'ورق A6 ملون',
-      description: 'ورق A6 ملون للملاحظات الملونة',
+      name: 'Glossy Photo Paper Epson',
+      description: 'ورق صور إبسون لامع A4',
       longDescription:
-          'ورق A6 ملون بألوان متنوعة ومشرقة، مثالي لتنظيم الملاحظات والمهام حسب الأولوية أو النوع. يساعد على التنظيم البصري وإضافة لمسة من المرح إلى يومك.',
-      price: 12000,
-      image: 'assets/images/a6_colored.png',
-      category: 'A6',
+          'Premium Photo Paper Glossy من Epson بقياس 8.5×11 بوصة لصور زاهية ودقة عالية.',
+      price: 25000.0,
+      image:
+          'https://d3e54emdgoy1fq.cloudfront.net/uploads/product/image/317192/medium_660_660_037fc-Epson-S041667-Photo-Paper-EPSON-S041667-50-Sheets-Premium-Photo-Paper-Glossy-8-5-x-11-.jpg',
+      category: 'ورق صور',
       features: [
-        '500 ورقة ملونة',
-        '8 ألوان مختلفة',
-        'مثالي لتنظيم المهام',
-        'ألوان زاهية ومشرقة',
-        'سهل التمييز والفرز',
-        'جودة ممتازة بسعر مناسب',
+        'A4 (8.5×11) لامع',
+        'طبقة لامعة لألوان نابضة',
+        'مناسب لطابعات Epson وغيرها',
       ],
       images: [
-        'assets/images/a6_colored_1.png',
-        'assets/images/a6_colored_2.png',
-        'assets/images/a6_colored_3.png',
+        'https://d3e54emdgoy1fq.cloudfront.net/uploads/product/image/317192/medium_660_660_037fc-Epson-S041667-Photo-Paper-EPSON-S041667-50-Sheets-Premium-Photo-Paper-Glossy-8-5-x-11-.jpg',
+        'https://d3e54emdgoy1fq.cloudfront.net/uploads/product/image/317192/medium_660_660_037fc-Epson-S041667-Photo-Paper-EPSON-S041667-50-Sheets-Premium-Photo-Paper-Glossy-8-5-x-11-.jpg',
       ],
     ),
+    // 6) A4 70 جم
     Product(
       id: '6',
-      name: 'ورق A6 مقوى',
-      description: 'ورق A6 مقوى للبطاقات والدعوات',
+      name: 'ورق A4 70 جم',
+      description: 'ورق A4 اقتصادي 70 جم/م²',
       longDescription:
-          'ورق A6 مقوى عالي الجودة، مثالي لصنع البطاقات المعايدة، دعوات الأفراح، بطاقات العمل، والمشاريع الفنية. متين ومقاوم للتجعد مع إنهاء سطح أملس وأنيق.',
-      price: 18000,
-      image: 'assets/images/a6_cardboard.png',
-      category: 'A6',
+          'خيار اقتصادي لأعمال الطباعة اليومية بكميات كبيرة. مناسب للمدارس والمكاتب.',
+      price: 14000.0,
+      image:
+          'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+      category: 'ورق طباعة',
+      features: ['500 ورقة', '70 جم/م²', 'مناسب للنسخ والطباعة النصية'],
+      images: [
+        'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+      ],
+    ),
+    // 7) A4 ملون
+    Product(
+      id: '7',
+      name: 'ورق A4 ملون',
+      description: 'مجموعة أوراق A4 ملونة متعددة',
+      longDescription:
+          'مجموعة من أوراق A4 بألوان متنوعة للمشاريع المدرسية والعروض والديكورات.',
+      price: 20000.0,
+      image:
+          'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+      category: 'ورق ملون',
+      features: ['10 ألوان زاهية', 'وزن 80 جم/م²', 'مناسب للطباعة والقص'],
+      images: [
+        'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+      ],
+    ),
+    // 8) A5 ملون
+    Product(
+      id: '8',
+      name: 'ورق A5 ملون',
+      description: 'مجموعة أوراق A5 ملونة للملاحظات',
+      longDescription:
+          'ألوان متعددة بحجم A5 لتنظيم الملاحظات والإشارات الملونة والمخططات الصغيرة.',
+      price: 16000.0,
+      image:
+          'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
+      category: 'ورق ملون',
       features: [
-        '300 ورقة مقواة',
-        'وزن الورقة: 200 جم/م²',
-        'سطح أملس ومقاوم',
-        'مناسب للطباعة الملونة',
-        'مثالي للبطاقات والدعوات',
-        'متين وطويل الأمد',
+        'A5 148×210 مم',
+        'ألوان زاهية متعددة',
+        'مناسب للأعمال المدرسية',
       ],
       images: [
-        'assets/images/a6_cardboard_1.png',
-        'assets/images/a6_cardboard_2.png',
-        'assets/images/a6_cardboard_3.png',
+        'https://avatars.mds.yandex.net/i?id=98bf2bc09da7c64a7c50d7cf5a5a8320df367984-12314975-images-thumbs&n=13',
       ],
     ),
   ];
