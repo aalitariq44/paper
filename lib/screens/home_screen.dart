@@ -261,22 +261,42 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
                 _buildDrawerItem(
-                  icon: Icons.article,
-                  title: 'ورق A4',
+                  icon: Icons.print,
+                  title: 'ورق طباعة',
                   onTap: () {
                     Navigator.pop(context);
                     setState(() {
-                      _selectedCategory = 'A4';
+                      _selectedCategory = 'ورق طباعة';
                     });
                   },
                 ),
                 _buildDrawerItem(
-                  icon: Icons.note,
-                  title: 'ورق A6',
+                  icon: Icons.image,
+                  title: 'ورق صور',
                   onTap: () {
                     Navigator.pop(context);
                     setState(() {
-                      _selectedCategory = 'A6';
+                      _selectedCategory = 'ورق صور';
+                    });
+                  },
+                ),
+                _buildDrawerItem(
+                  icon: Icons.palette,
+                  title: 'ورق ملون',
+                  onTap: () {
+                    Navigator.pop(context);
+                    setState(() {
+                      _selectedCategory = 'ورق ملون';
+                    });
+                  },
+                ),
+                _buildDrawerItem(
+                  icon: Icons.sticky_note_2,
+                  title: 'ورق لاصق',
+                  onTap: () {
+                    Navigator.pop(context);
+                    setState(() {
+                      _selectedCategory = 'ورق لاصق';
                     });
                   },
                 ),

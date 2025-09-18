@@ -142,5 +142,10 @@ class ProductData {
     ),
   ];
 
-  static List<String> get categories => ['الكل', 'A4', 'A6'];
+  static List<String> get categories => [
+    'ورق طباعة',
+    'ورق صور',
+    'ورق ملون',
+    'ورق لاصق',
+  ];
 }
